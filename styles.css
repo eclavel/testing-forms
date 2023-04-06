@@ -42,6 +42,7 @@ body {
   margin: 0 0 40px 0;
 }
 
+/* styling text input fields */
 .form-row {
   margin-bottom: 40px;
   display: flex;
@@ -50,6 +51,11 @@ body {
   flex-wrap: wrap;
 }
 
+.form-row label {
+  margin-bottom: 15px;
+}
+
+/* styling email and text input fields */
 .form-row input[type="text"],
 .form-row input[type="email"] {
   background-color: #ffffff;
@@ -67,10 +73,7 @@ body {
   box-shadow: none; /* Remove default red glow in Firefox */
 }
 
-.form-row label {
-  margin-bottom: 15px;
-}
-
+/* styling radio buttons */
 .legacy-form-row {
   border: none;
   margin-bottom: 40px;
@@ -95,6 +98,61 @@ body {
   float: left;
 }
 
+/* styling select elements */
+.form-row select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px; /* This won't work in Chrome or Safari */
+  -webkit-appearance: none; /* This will make it work */
+}
+
+/* styling textarea */
+.form-row textarea {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: none;
+}
+
+.form-row .instructions {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* styling checkboxes */
+.form-row .checkbox-label {
+  margin-bottom: 0;
+}
+
+/* styling buttons */
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #ffffff;
+  background-color: #5995da;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #76aeed;
+}
+
+.form-row button:active {
+  background-color: #407fc7;
+}
 @media only screen and (min-width: 700px) {
   .speaker-form-header,
   .speaker-form {
@@ -129,5 +187,15 @@ body {
   }
   .legacy-form-row legend {
     float: left;
+  }
+  .form-row .instructions {
+    margin-left: 120px;
+  }
+  .form-row .checkbox-label {
+    margin-left: 120px;
+    width: auto;
+  }
+  .form-row button {
+    margin-left: 120px;
   }
 }
